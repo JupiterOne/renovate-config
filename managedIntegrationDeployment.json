@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "github>lifeomic/renovate-config",
+    "github>lifeomic/renovate-config:lambda-8.10"
+  ],
+  "packageRules": [
+    {
+      "packagePatterns": [".*"],
+      "excludePackagePatterns": ["^@jupiterone"],
+      "extends": ["schedule:weekly"]
+    },
+    {
+      "packagePatterns": ["^@jupiterone"],
+      "groupName": "jupiterone packages"
+    }
+  ],
+  "reviewers": ["aiwilliams-lo", "isaacwilliams-lifeomic"]
+}
